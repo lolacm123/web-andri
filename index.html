@@ -13,6 +13,10 @@
     <img src="UBP.png" alt="Logo UBP">
 </div>
     <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Simbol hamburger -->
+        </div>
+        
         <div class="wrapper">
             <div class="logo">
                 <a href="">Andri Sharp</a>
@@ -110,6 +114,11 @@
                 splash.classList.add('hidden');
             }, 3000);
         });
+
+        function toggleMenu() {
+        const menu = document.querySelector('nav .menu ul');
+        menu.classList.toggle('active');
+    }
     </script>
 </body>
 </html>

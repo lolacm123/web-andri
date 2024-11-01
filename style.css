@@ -67,6 +67,72 @@ p.deskripsi {
     margin-bottom: 20px;
 }
 
+/* Media Queries untuk Smartphone */
+@media (max-width: 768px) {
+    nav .menu ul {
+        flex-direction: column; /* Mengubah arah menu menjadi kolom */
+        align-items: center; /* Mengatur isi menu di tengah */
+    }
+
+    nav .menu ul li {
+        margin: 10px 0; /* Menambahkan jarak vertikal antara item menu */
+    }
+
+    nav .logo a {
+        margin: 0 auto; /* Memusatkan logo */
+    }
+
+    section {
+        padding: 20px 0; /* Mengurangi padding di section */
+    }
+
+    .tutor-list, .partner-list {
+        flex-direction: column; /* Mengubah arah list menjadi kolom */
+        align-items: center; /* Memusatkan kartu tutor dan partner */
+    }
+
+    .kartu-tutor, .kartu-partner {
+        width: 80%; /* Memperlebar kartu di smartphone */
+        max-width: 300px; /* Menetapkan lebar maksimum untuk kartu */
+    }
+}
+
+/* Media Queries untuk Tablet */
+@media (max-width: 1024px) {
+    nav .menu ul {
+        flex-direction: row; /* Kembali ke kolom untuk tablet */
+        justify-content: center; /* Memusatkan menu di tablet */
+    }
+
+    .kartu-tutor, .kartu-partner {
+        width: 45%; /* Menetapkan lebar untuk kartu di tablet */
+    }
+}
+
+.hamburger {
+    display: none; /* Sembunyikan hamburger di layar besar */
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Tampilkan hamburger di smartphone */
+    }
+
+    nav .menu ul {
+        display: none; /* Sembunyikan menu secara default di smartphone */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .menu ul.active {
+        display: flex; /* Tampilkan menu saat hamburger diklik */
+    }
+}
+
+
 /* Navigation Menu */
 nav {
     background-color: #34495e;
